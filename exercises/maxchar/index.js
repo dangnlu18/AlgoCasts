@@ -34,4 +34,18 @@ function makeDict(str){
     return dict
 }
 
+//cleaner way to code this
+function makeDict(str){
+    let dict = {}
+    for (let char of str){
+        if(dict[char]){
+            dict[char] ++
+        }
+        else{
+            dict[char] = 1
+        }
+    }
+    return dict
+}
+
 module.exports = maxChar;
