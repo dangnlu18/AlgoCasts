@@ -26,17 +26,6 @@ function anagrams(stringA, stringB) {
         }
 
     }
-
-    // if (stringA.length !== stringB.length){
-    //     return false
-    // }
-    // else{
-    //     const mapA = makeDict(stringA)
-    //     const mapB = makeDict(stringB)
-        
-    
-       
-    // }
 }
 
 
