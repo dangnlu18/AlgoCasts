@@ -11,15 +11,24 @@
 function chunk(array, size) {
     const chunk = []
 
-    for (let element of array){
-        const last = chunk[chunk.length - 1]
-        if (!last || last.length === size){
-            chunk.push([element])
-        }
-        else{
-            last.push(element)
-        }
+//     for (let element of array){
+//         const last = chunk[chunk.length - 1]
+//         if (!last || last.length === size){
+//             chunk.push([element])
+//         }
+//         else{
+//             last.push(element)
+//         }
+//     }
+//     return chunk
+// }
+    let i = 0
+
+    while(i < array.length ){
+        chunk.push(array.slice(i, size+i))
+        i +=size
     }
+    
     return chunk
 }
 
