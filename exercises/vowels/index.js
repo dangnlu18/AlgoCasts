@@ -8,12 +8,13 @@
 //   vowels('Why?') --> 0
 
 function vowels(str) {
-    const map = makeCharMap(str)
+    // const map = makeCharMap(str)
     let count = 0
+    const vowels = 'aeiou'
     
     for (let key of str){
-        if (key.toLowerCase() ==='a' || key.toLowerCase() === 'e' || key.toLowerCase()==='i' || key.toLowerCase() ==='o' || key.toLowerCase() ==='u'){
-            count += map[key.toLowerCase()]
+        if (vowels.includes(key.toLowerCase())){
+            count +=1
         }
     }
     return count
