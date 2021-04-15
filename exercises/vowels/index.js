@@ -12,8 +12,8 @@ function vowels(str) {
     let count = 0
     
     for (let key of str){
-        if (key ==='a' || key === 'e' || key==='i' || key ==='o' || key ==='u'){
-            count += map[key]
+        if (key.toLowerCase() ==='a' || key.toLowerCase() === 'e' || key.toLowerCase()==='i' || key.toLowerCase() ==='o' || key.toLowerCase() ==='u'){
+            count += map[key.toLowerCase()]
         }
     }
     return count
