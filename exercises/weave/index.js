@@ -32,9 +32,13 @@ function weave(sourceOne, sourceTwo) {
     // if item is undefined, add the rest of the items from the other queue
     let q = new Queue();
 
-    while (sourceOne.peek() && sourceTwo.peek()){
-        q.add(sourceOne.remove())
-        q.add(sourceTwo.remove())
+    while (sourceOne.peek() || sourceTwo.peek()){
+        if (sourceOne.peek()){
+            q.add(sourceOne.remove())
+        }
+        if (sourceTwo.peek()){
+            q.add(sourceTwo.remove())
+        }
     }
 
     return q
